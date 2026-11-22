@@ -88,6 +88,32 @@ span.icon-roseal-hidden-label::after {
 }
 
 .advanced-customization-modal {
+    .input-addon-btn, .remove-item-btn {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        min-width: 28px;
+        min-height: 28px;
+        color: var(--RS_TEXT-COLOR);
+        background: var(--RS_SECONDARY-BACKGROUND-COLOR);
+        border: 1px solid var(--RS_LINE-COLOR);
+        border-radius: 6px;
+    }
+    .input-addon-btn::after { content: "\2192"; }
+    .remove-item-btn::after { content: "\00d7"; font-size: 22px; }
+
+    .nav-links .rbx-tab { list-style: none; padding-bottom: 6px; }
+    .nav-links .rbx-tab.active { border-bottom: 3px solid #335fff; }
+    .nav-links .rbx-tab-heading { color: var(--RS_TEXT-COLOR); cursor: pointer; }
+    .thumbnail-preview img, .avatar-card-image img { width: 100%; height: 100%; object-fit: contain; }
+    .thumbnail-navigation .avatar { width: 48px; height: 48px; }
+    .thumbnail-navigation .avatar-card-image { display: block; width: 100%; height: 100%; }
+    .assets-list { padding: 0; list-style: none; }
+    .asset-thumbnail img { width: 100%; height: 100%; object-fit: contain; }
+    button[class*="btn-generic-edit"]::after { content: "Edit"; }
+    button[class*="btn-generic-plus"]::after { content: "+"; }
+    button[class*="btn-generic-minus"]::after { content: "\2212"; }
+
     .roseal-modal {
         width: 960px;
     }

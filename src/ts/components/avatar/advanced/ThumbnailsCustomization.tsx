@@ -20,7 +20,7 @@ import Loading from "../../core/Loading";
 import { warning } from "../../core/systemFeedback/helpers/globalSystemFeedback";
 import Thumbnail from "../../core/Thumbnail";
 import Toggle from "../../core/Toggle";
-import useAuthenticatedUser from "../../hooks/useAuthenticatedUser";
+import useAuthenticatedUser from "./useAvatarUser";
 import usePromise from "../../hooks/usePromise";
 import type { AdvancedAvatarViewType } from "../AdvancedCustomizationButton";
 import ThumbnailConfigItem from "./ThumbnailConfigItem";

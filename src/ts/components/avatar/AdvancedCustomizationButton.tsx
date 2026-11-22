@@ -16,7 +16,7 @@ import SimpleModal from "../core/modal/SimpleModal";
 import TabsContainer from "../core/tab/Container";
 import TabNavs from "../core/tab/Navs";
 import SimpleTabNav from "../core/tab/SimpleNav";
-import useAuthenticatedUser from "../hooks/useAuthenticatedUser";
+import useAuthenticatedUser from "./advanced/useAvatarUser";
 import usePromise from "../hooks/usePromise";
 import AssetConfiguration from "./advanced/AssetConfiguration";
 import { AssetsList } from "./advanced/AssetsList";

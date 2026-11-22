@@ -12,6 +12,90 @@
 }
 
 .roseal-modal-container {
+    font: 16px/1.4 "Builder Sans", Arial, sans-serif;
+
+    &, * { box-sizing: border-box; }
+
+    button, a { cursor: pointer; }
+    button:disabled { cursor: default; opacity: 0.5; }
+
+    button[class*="btn-"] {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 6px;
+        min-height: 32px;
+        padding: 6px 12px;
+        border: 1px solid var(--RS_LINE-COLOR);
+        border-radius: 8px;
+        background: var(--RS_SECONDARY-BACKGROUND-COLOR);
+        color: var(--RS_TEXT-COLOR);
+    }
+
+    .input-field {
+        width: 100%;
+        min-height: 36px;
+        padding: 6px 10px;
+        background: var(--RS_BACKGROUND-2-COLOR);
+        color: var(--RS_TEXT-COLOR);
+        border: 1px solid var(--RS_LINE-COLOR);
+        border-radius: 8px;
+    }
+
+    .btn-toggle {
+        flex-shrink: 0;
+        width: 44px;
+        height: 24px;
+        min-height: 24px !important;
+        padding: 2px !important;
+        justify-content: flex-start !important;
+        border-radius: 20px !important;
+        background: var(--RS_BACKGROUND-4-COLOR) !important;
+        &.on { background: #335fff !important; }
+        .toggle-flip {
+            display: block;
+            width: 18px;
+            height: 18px;
+            border-radius: 50%;
+            background: #fff;
+        }
+        &.on .toggle-flip { margin-left: auto; }
+    }
+
+    .roseal-range {
+        width: 100%;
+        height: 20px;
+        appearance: none;
+        background: transparent;
+        &::-webkit-slider-runnable-track {
+            height: 6px;
+            border-radius: 3px;
+            background: var(--RS_LINE-COLOR) !important;
+            background-image: none !important;
+        }
+        &::-webkit-slider-thumb {
+            appearance: none;
+            width: 16px;
+            height: 16px;
+            margin-top: -5px;
+            border-radius: 50%;
+            background: #335fff;
+        }
+    }
+
+    .close {
+        float: right;
+        width: 28px;
+        height: 28px;
+        border: 0;
+        background: transparent;
+        color: inherit;
+        .icon-close::before { content: "\00d7"; font-size: 26px; }
+    }
+
+    .modal-title { font-size: 20px; font-weight: 700; margin: 0 30px 12px; }
+    .modal-footer { padding-top: 12px; }
+
     position: fixed;
     inset: 0;
     z-index: 1050;

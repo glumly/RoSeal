@@ -27,7 +27,7 @@ import { crossSort } from "src/ts/utils/objects";
 import ItemLookup from "../../core/ItemLookup";
 import Loading from "../../core/Loading";
 import { warning } from "../../core/systemFeedback/helpers/globalSystemFeedback";
-import useAuthenticatedUser from "../../hooks/useAuthenticatedUser";
+import useAuthenticatedUser from "./useAvatarUser";
 import useFeatureValue from "../../hooks/useFeatureValue";
 import usePromise from "../../hooks/usePromise";
 import type { AdvancedWornAsset } from "../AdvancedCustomizationButton";
