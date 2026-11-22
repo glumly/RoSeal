@@ -25,6 +25,13 @@ submission and emote selection are not verified. Final slider track and action
 glyph refinements were compiled after those live checks. A broad TypeScript
 check did not finish and is not claimed as passing.
 
+The shared range stylesheet now paints a continuous neutral track instead of a
+progress gradient whose unused dark segment looked cut off. The three thumbnail
+inputs were verified live at equal widths: 526px on desktop and 482px at a 600px
+viewport. The narrow layout stacks correctly. The normal viewport was restored.
+The same Slider component is used for asset scale and XYZ coordinates; those
+consumers receive the shared style but were not separately exercised live.
+
 ## Load the unpacked Chromium extension
 
 1. Extract the ZIP to a permanent folder.

@@ -62,27 +62,6 @@
         &.on .toggle-flip { margin-left: auto; }
     }
 
-    .roseal-range {
-        width: 100%;
-        height: 20px;
-        appearance: none;
-        background: transparent;
-        &::-webkit-slider-runnable-track {
-            height: 6px;
-            border-radius: 3px;
-            background: var(--RS_LINE-COLOR) !important;
-            background-image: none !important;
-        }
-        &::-webkit-slider-thumb {
-            appearance: none;
-            width: 16px;
-            height: 16px;
-            margin-top: -5px;
-            border-radius: 50%;
-            background: #335fff;
-        }
-    }
-
     .close {
         float: right;
         width: 28px;
