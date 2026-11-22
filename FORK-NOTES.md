@@ -32,6 +32,19 @@ viewport. The narrow layout stacks correctly. The normal viewport was restored.
 The same Slider component is used for asset scale and XYZ coordinates; those
 consumers receive the shared style but were not separately exercised live.
 
+The existing autocomplete now owns its opaque background, border, positioning,
+stacking and scroll limit. Its height is bounded by the visible viewport and
+modal; it opens upward when there is more room above. Arrow keys navigate the
+suggestions and Enter chooses the highlighted item; Escape and Tab dismiss the
+list. Manual ID submission remains available when no suggestion is highlighted.
+Live checks confirmed containment at desktop and 600px widths, highlight changes,
+keyboard scrolling to a later result (scrollTop 414), and Escape dismissal.
+Pointer selection and Enter selection were not exercised because choosing an
+emote saves the thumbnail pose. A pointer-wheel attempt did not move the list;
+wheel scrolling is not claimed as verified. The normal viewport was restored.
+The shared component also serves asset, user and tracking-exception lookups;
+those consumers were inspected in source but not separately tested live.
+
 ## Load the unpacked Chromium extension
 
 1. Extract the ZIP to a permanent folder.
