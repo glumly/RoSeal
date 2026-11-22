@@ -1,4 +1,10 @@
 .roseal-modal-backdrop {
+    // Roblox pages no longer consistently include Bootstrap's modal styles.
+    position: fixed;
+    inset: 0;
+    z-index: 1040;
+    background: #000;
+
     &.show {
         opacity: 0.7 !important;
         filter: alpha(opacity=70) !important;
@@ -6,8 +12,17 @@
 }
 
 .roseal-modal-container {
+    position: fixed;
+    inset: 0;
+    z-index: 1050;
+    outline: 0;
     overflow-y: auto;
     .modal-dialog {
+        position: relative;
+        width: auto;
+        max-width: calc(100% - 20px);
+        margin: 30px auto;
+        pointer-events: none;
         transition: none !important;
         -webkit-transform: translateZ(0) !important;
         transform: translateZ(0) !important;
@@ -28,6 +43,14 @@
     }
 
     .modal-content {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        pointer-events: auto;
+        background-color: var(--RS_BACKGROUND-1-COLOR, #fff);
+        color: var(--RS_TEXT-COLOR, #191919);
+        border: 1px solid var(--RS_LINE-COLOR, #ccc);
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
         /* rotector fixes */
         padding: 12px !important;
         overflow: unset !important;
@@ -37,6 +60,12 @@
     }
 
     .roseal-modal {
+        width: 600px;
+
+        &.modal-sm { width: 300px; }
+        &.modal-lg { width: 900px; }
+        &.modal-xl { width: 1140px; }
+
         .modal-header {
             /* rotector fixes */
             display: unset !important;
@@ -57,6 +86,8 @@
         }
 
         .modal-body {
+            position: relative;
+            padding: 15px;
             white-space: break-spaces;
         }
         .modal-buttons-with-footer {

@@ -88,6 +88,39 @@ span.icon-roseal-hidden-label::after {
 }
 
 .advanced-customization-modal {
+    .roseal-modal {
+        width: 960px;
+    }
+
+    .advanced-customization-content {
+        display: flex;
+        gap: 16px;
+    }
+
+    .advanced-customization-left {
+        flex: 0 0 350px;
+    }
+
+    .advanced-customization-right {
+        flex: 1;
+        min-width: 0;
+    }
+
+    @media (max-width: 767px) {
+        .advanced-customization-content {
+            flex-direction: column;
+        }
+
+        .advanced-customization-left {
+            flex-basis: auto;
+        }
+
+        .page-container.max-size {
+            height: auto;
+            min-height: 443px;
+        }
+    }
+
     .thumbnail-navigation-container {
         display: flex;
         flex-direction: column;
